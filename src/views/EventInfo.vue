@@ -127,7 +127,7 @@
                                     <br>
                                     <div v-if="Option['Voted'] === true && Option['Option'] === String(opId)"
                                          style="color: #ff7f00">
-                                        {{'已投注：' + Option['Finance']}}
+                                        {{'您已投注：' + Option['Finance']}}
                                     </div>
                                 </el-button>
                             </el-popover>
@@ -180,7 +180,7 @@
                 ReportButton: true,
                 RewardButton: true,
                 Hash: '',
-                Address: ethereum.selectedAddress,
+                Address: '',
                 Event: '',
                 Voters: [],
                 Id: this.$route.params.id,
@@ -191,8 +191,20 @@
         },
 
         created: function () {
-            this.getEvent();
-            this.getVote();
+            if (typeof web3 !== 'undefined') {
+                this.Address = ethereum.selectedAddress;
+                this.getEvent();
+                this.getVote();
+            } else {
+                this.axios.get('data.json').then(response => {
+                    this.Event = response.data["Event"];
+                    // this.Voters = this.$Deduplication(response.data["Event"]['Voters']);
+                    this.Option = response.data["Option"];
+                    this.OptionFinance = response.data["OptionFinance"];
+                    this.tableData = response.data["tableData"];
+                    this.Loading = false;
+                })
+            }
         },
 
         methods: {
@@ -213,9 +225,12 @@
             },
 
             getEventOptionInfo(Option) {
-                this.$getEventOptionInfo(this.Id, Option).then(result => {
-                    this.$set(this.OptionFinance, Option, parseInt(result));
-                })
+                if (typeof web3 !== 'undefined') {
+                    this.$getEventOptionInfo(this.Id, Option).then(result => {
+                        this.$set(this.OptionFinance, Option, parseInt(result));
+                    })
+                } else {
+                }
             },
 
             getRecord() {

@@ -17,7 +17,7 @@ Due to international network restrictions, it is not possible to directly use [I
 - [x] Other
 
 ## Technology used
-- VueCli
+- VueCli 3.x
 - Vue 2.x
 - Vuex
 - Vue Router
@@ -28,6 +28,8 @@ Due to international network restrictions, it is not possible to directly use [I
 - axios
 - webpack
 - Other
+
+Note: In VueCli 2.x, public files are placed in the static folder, and in VueCli 3.x versions, please put them in the public folder, otherwise Axios cannot find the files. The project uses VueCli 3.x.
 
 ## Brief introduction of the project
 - Classified display events

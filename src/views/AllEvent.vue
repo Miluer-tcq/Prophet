@@ -37,12 +37,20 @@
         },
 
         created: function () {
-            this.getTotalEvent();
+            if (typeof web3 !== 'undefined') {
+                this.getTotalEvent();
+            } else {
+                this.axios.get('data.json').then(response => {
+                    this.AllEvents.push(response.data["Event"]);
+                    this.ShowEvent = this.Finished = this.AllEvents;
+                    this.Loading = false;
+                })
+            }
         },
 
         methods: {
             getTotalEvent() {
-                this.$Connection()
+                this.$Connection();
                 this.$getTotalEvent().then(result => {
                     this.TotalEvent = parseInt(result);
                     this.Loading = false;
@@ -77,7 +85,7 @@
                 })
             },
 
-            sortID(a,b){
+            sortID(a, b) {
                 return b['ID'] - a['ID'];
             },
 

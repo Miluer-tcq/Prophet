@@ -5,7 +5,8 @@
                 <el-tab-pane label="我的投票" name="first"></el-tab-pane>
                 <el-tab-pane label="我的创建" name="second"></el-tab-pane>
                 <el-tab-pane name="third">
-                    <span slot="label">我待汇报<el-badge v-if="ReportEvent.length !== 0" :value="ReportEvent.length" class="item"></el-badge></span>
+                    <span slot="label">我待汇报<el-badge v-if="ReportEvent.length !== 0" :value="ReportEvent.length"
+                                                     class="item"></el-badge></span>
                 </el-tab-pane>
                 <el-tab-pane label="我已汇报" name="fourth"></el-tab-pane>
             </el-tabs>
@@ -42,12 +43,15 @@
         },
 
         created: function () {
-            this.getPlayerEvent();
+            if (typeof web3 !== 'undefined') {
+                this.getPlayerEvent();
+            } else {
+            }
         },
 
         methods: {
             getPlayerEvent() {
-                this.$Connection()
+                this.$Connection();
                 this.$getPlayer().then(result => {
                     this.TotalEvent = result;
                     this.Loading = false;
@@ -91,7 +95,7 @@
                 })
             },
 
-            sortID(a,b){
+            sortID(a, b) {
                 return b['ID'] - a['ID'];
             },
 

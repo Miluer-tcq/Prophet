@@ -17,7 +17,7 @@
 - [x] Other
 
 ## 所用技术
-- VueCli
+- VueCli 3.x
 - Vue 2.x
 - Vuex
 - Vue Router
@@ -28,6 +28,8 @@
 - axios
 - webpack
 - 其他
+
+注意：在VueCli 2.x中公共文件放入static文件夹，而在VueCli 3.x版本中请放入public文件夹，否则axios无法找到文件。该项目采用VueCli 3.x。
 
 ## 项目简略介绍
 - 分类展示事件
