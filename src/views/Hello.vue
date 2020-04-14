@@ -27,7 +27,7 @@
                             <p>旨在于提供一个去中心化的数据交互方式,用户的投票纪录将<strong>不可篡改</strong>地保存在区块链中。</p>
                             <p>用户在有<strong>成本制约</strong>的投票行为下，整体投票结果将对预测事件未来发展具有可靠的参考意义。</p>
                             <p style="color: #ff3508">注：考虑到外网环境因素，平台采用MetaMask插件在国内网络环境接入以太坊。</p>
-                            <p style="color: #ff3508">如不方便安装，可访问左侧概览查看演示事件，或访问<a
+                            <p style="color: #ff3508">如不方便安装，可直接访问左侧<strong style="color: #4e4949">概览</strong>查看演示事件，或访问<a
                                     href="https://gitee.com/t940783074/Prophet"
                                     target="_blank">Gitee</a>查看项目介绍。</p>
                             <el-button style="margin-top: 12px;" type="warning" @click="next">下一步</el-button>
