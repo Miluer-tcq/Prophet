@@ -1,0 +1,46 @@
+{
+  "Event": {
+    "ID": "0",
+    "Sponsor": "0x95b18250bc652D0be9E8BA534ca0428648e77Eb0",
+    "Content": "此为本地演示事件",
+    "Option": [
+      "非区块链事件",
+      "请安装插件体验平台完整功能"
+    ],
+    "Reporter": "0xDd489b5491afFd2aD57B90B503E97062F10F124a",
+    "StartDate": "1586159825",
+    "Deadline": "1586880008",
+    "Voters": [
+      "0x603f27989D09ef0B7BcEbc704C9b5A2Ce4e79e90",
+      "0x7ea6d44eD92f5DA9b942576032815dB8f0FD82A7"
+    ],
+    "PrizePool": "6399",
+    "Report": false,
+    "Result": "99"
+  },
+  "Option": {
+    "Voted": true,
+    "Time": "1586856333",
+    "Option": "1",
+    "Finance": "4399",
+    "Reward": false
+  },
+  "OptionFinance": {
+    "0": 2000,
+    "1": 4399
+  },
+  "tableData": [
+    {
+      "Time": "2020-04-14 17:25:33",
+      "Option": "请安装插件体验平台完整功能",
+      "Finance": "4399",
+      "address": "0x603f27989D09ef0B7BcEbc704C9b5A2Ce4e79e90"
+    },
+    {
+      "Time": "2020-04-15 12:21:53",
+      "Option": "非区块链事件",
+      "Finance": "2000",
+      "address": "0x7ea6d44eD92f5DA9b942576032815dB8f0FD82A7"
+    }
+  ]
+}
