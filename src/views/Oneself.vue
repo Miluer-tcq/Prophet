@@ -32,7 +32,7 @@
             return {
                 activeName: 'first',
                 Loading: true,
-                Address: ethereum.selectedAddress,
+                Address: typeof ethereum !== 'undefined'? ethereum.selectedAddress:null,
                 TotalEvent: [],
                 ShowEvent: [],
                 SelectedEvent: [],
@@ -46,6 +46,7 @@
             if (typeof web3 !== 'undefined') {
                 this.getPlayerEvent();
             } else {
+                this.Loading = false;
             }
         },
 
