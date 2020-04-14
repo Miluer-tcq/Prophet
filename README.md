@@ -26,6 +26,7 @@
 - Node.js
 - axios
 - webpack
+- 其他
 
 ## 项目简略介绍
 - 分类展示事件
@@ -46,7 +47,7 @@
 - 醒目的个人平台代币余额
 - 个人操作纪录
 ![](img/个人详情信息.png)
-##部分小细节（[浏览demo发现更多](https://t940783074.gitee.io/prophet)）
+- 部分小细节（[浏览demo发现更多](https://t940783074.gitee.io/prophet)）
 ![](img/交易.png)
 ![](img/交易1.png)
 
@@ -66,8 +67,8 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
+## Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### 开源协议
+## 开源协议
 - 请遵循原作者MIT开源协议
