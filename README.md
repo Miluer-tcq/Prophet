@@ -1,4 +1,5 @@
 # Prophet（预言家）
+[中文](README.md) | [English](README.en.md)
 ## 基于以太坊区块链智能合约技术和Vue框架开发的投票预测平台
 - ## [项目已部署，在线Demo](https://t940783074.gitee.io/prophet)
 介于国际网络限制，无法直接使用[Infura](https://infura.io/)访问以太坊Dapp，因此平台完整体验采用安装[MetaMask](https://metamask.io/)浏览器插件的解决办法。
